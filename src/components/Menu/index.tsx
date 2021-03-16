@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         left: 15,
-        top: 40,
+        top: 25,
         borderTopRightRadius: 30,
         borderBottomRightRadius: 30,
         borderBottomLeftRadius: 30,

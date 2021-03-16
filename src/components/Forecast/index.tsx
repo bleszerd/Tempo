@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         paddingTop: 10,
         paddingBottom: 10,
+        marginBottom: 12,
         paddingLeft: 14,
         paddingRight: 14,
         justifyContent: 'space-around',

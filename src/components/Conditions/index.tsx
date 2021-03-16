@@ -1,8 +1,9 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
+import { ConditionProps } from '../../typescript/types'
 
-export default function Conditions() {
+export default function Conditions({weather}: ConditionProps) {
     return (
         <View style={styles.container}>
             <View style={styles.conditions}>
@@ -11,7 +12,7 @@ export default function Conditions() {
                     size={23}
                     color="#1ed6ff"
                 />
-                <Text>7 km/h</Text>
+                <Text>{weather.results.wind_speedy}</Text>
             </View>
 
             <View style={styles.conditions}>
@@ -20,7 +21,7 @@ export default function Conditions() {
                     size={23}
                     color="#1ed6ff"
                 />
-                <Text>5:22 am</Text>
+                <Text>{weather.results.sunrise}</Text>
             </View>
 
             <View style={styles.conditions}>
@@ -29,7 +30,7 @@ export default function Conditions() {
                     size={23}
                     color="#1ed6ff"
                 />
-                <Text>5:22 pm</Text>
+                <Text>{weather.results.sunrise}</Text>
             </View>
 
             <View style={styles.conditions}>
@@ -38,7 +39,7 @@ export default function Conditions() {
                     size={23}
                     color="#1ed6ff"
                 />
-                <Text>65</Text>
+                <Text>{weather.results.humidity}</Text>
             </View>
         </View>
     )
