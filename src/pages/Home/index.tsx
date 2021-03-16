@@ -31,6 +31,12 @@ export default function Home() {
 
             const response = await API.get(`/weather?key=${key}&lat=${coords.latitude}&lon=${coords.longitude}`)
 
+            if(response.data.valid_key === false){
+                setErrorMsg('Chave inválida para a API.')
+                setLoading(false)
+                return
+            }
+            
             setWeather(response.data)
 
             if (response.data.results.currently === 'noite') {
