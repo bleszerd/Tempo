@@ -16,7 +16,11 @@ export default function Search() {
     async function handleSearch() {
         const response = await API.get(`/weather?key=${key}&city_name=${input}`)
 
-        console.log(response.data);
+        if(response.data.valid_key === false){
+            setError('Chave inválida para a API. Inclua-a ao final do "app.json" se você for um desenvolvedor.')
+            return
+        }
+
         if (response.data.by === 'default') {
             setError('Cidade não encontrada!')
             setInput('')
@@ -113,7 +117,7 @@ export default function Search() {
                 </View>
             </View>
 
-            {error && <Text style={{ marginTop: 25, fontSize: 18 }}>{error}</Text>}
+            {error && <Text style={{ marginTop: 25, fontSize: 18, paddingHorizontal: 20, textAlign: 'center' }}>{error}</Text>}
         </SafeAreaView>
     )
 }

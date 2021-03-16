@@ -29,7 +29,7 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "APP_API_KEY": "3b84332f" 
+      "APP_API_KEY": "YOUR API HERE" 
     }
   }
 }
