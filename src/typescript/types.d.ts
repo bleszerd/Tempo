@@ -1,5 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import '@expo/vector-icons'
+import React, { Component, ReactNode } from 'react';
 
 /* ================ Routes ================*/
 type HomeScreenNavigationProp = StackNavigationProp<
@@ -44,9 +45,10 @@ interface ForecastConditionData {
 interface HeaderProps {
     background: string[]
     weather: Weather
-    icon: {
+    Icon: {
         name: Icon
         color: string
+        component: any
     }
 }
 
@@ -87,4 +89,69 @@ interface Weather {
         wind_speedy: string
     }
     valid_key: true,
+}
+
+/* ================ Styled Components ================*/
+declare module 'styled-components' {
+    export interface DefaultTheme {
+        colors: {
+            lightBlue: String
+            gelo: String
+            white: String
+            darkBlue: String
+            blueGreenDark: String
+            sun: String
+            concrete: String
+        },
+        radius: {
+
+        },
+        spacing: {
+            margin: {
+
+            },
+            padding: {
+
+            }
+        }
+    }
+}
+
+/* ================ Scrollable Forecasts ================*/
+export interface ScrollableForecastsProps {
+    weatherData: {
+        condition: string
+        date: string
+        description: string
+        max: number
+        min: number
+        weekday: string
+    }[]
+}
+
+/* ================ Scrollable Forecasts ================*/
+export interface AppWrapperProps {
+    children: ReactNode
+}
+
+/* ================ Search Back Button Header ================*/
+export interface SearchBackButtonHeaderProps {
+    onPress: () => void;
+}
+
+/* ================ Search SearchBox ================*/
+export interface SearchSearchBoxProps {
+    inputValue: string
+    dispatch: React.Dispatch<any>
+    onPress: () => void;
+}
+
+/* ================ Search Forecast Card ================*/
+export interface SearchForecastCardProps {
+    cityData: any
+}
+
+/* ================ Error Label ================*/
+export interface ErrorLabelProps {
+    text: string
 }
