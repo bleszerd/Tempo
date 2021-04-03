@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'
 import { HeaderProps } from '../../typescript/types';
 
-export default function Header({background, weather, icon}: HeaderProps) {
+export default function Header({background, weather, Icon}: HeaderProps) {
     return (
         <LinearGradient
             style={styles.header}
@@ -13,9 +13,9 @@ export default function Header({background, weather, icon}: HeaderProps) {
             <Text style={styles.date}>{weather.results.date}</Text>
             <Text style={styles.city}>{weather.results.city_name}</Text>
 
-            <Ionicons
-                name={icon.name}
-                color={icon.color}
+            <Icon.component
+                name={Icon.name}
+                color={Icon.color}
                 size={150}
             />
 
