@@ -26,6 +26,6 @@ Next, open `app.json` on root of project and edit the last lines of json:
 ```
 Change `YOUR API HERE` with your [WheaterHG key](https://console.hgbrasil.com/keys/new_key_plan).
 
-Now you can run `expo start` to start Metro Bundler and edit the aplication.
+Now you can run `expo start` to start Metro Bundler and edit or build the aplication.
 
 **done!**
